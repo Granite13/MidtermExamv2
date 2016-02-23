@@ -57,6 +57,8 @@ public class MainActivity extends ListActivity {
             }
         });
 
+        new GetContacts().execute();
+
 
     }
 
