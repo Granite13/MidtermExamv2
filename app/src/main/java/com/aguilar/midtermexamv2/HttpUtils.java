@@ -48,12 +48,17 @@ public class HttpUtils {
             urlConnection.setRequestMethod(requestMethod);
             urlConnection.connect();
 
+
+
+
+
             // Read the input stream and convert into a response string
             InputStream inputStream = urlConnection.getInputStream();
 
             // This should not be changed to StringBuilder as this method must be invoked on a
             // background thread.
             StringBuffer buffer = new StringBuffer();
+
 
             if (inputStream == null) {
                 return null;

@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -77,6 +78,13 @@ public class MainActivity extends ListActivity {
             // Creating service handler class instance
 
             HttpUtils sh = new HttpUtils();
+            String jsonStr = sh.getResponse(url,TAG_TITLE);
+            Log.d("Response: ", "> " + jsonStr);
+
+
+            // String jsonStr = sh.getResponse(url,HttpUtils.GET);
+
+
 
 
             return null;
